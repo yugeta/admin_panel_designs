@@ -1,12 +1,28 @@
 footer{
-  /* height : var(--size-footer-height); */
   text-align:center;
   font-size:0.9rem;
   padding:20px;
-  /* border-top:1px solid black; */
   padding-top:20px;
-  /* margin-top:50px; */
-  /* box-shadow:0 0 5px rgba(0,0,0,0.5); */
   display:flex;
   align-items: flex-end;
+}
+
+@media (max-width:1000px){
+  footer{
+    font-size:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  footer::before{
+    content:'©';
+    font-size:2.0rem;
+  }
+  footer:hover{
+    background-color:var(--color-menu-hover);
+  }
+}
+@media (max-width:500px){
+
 }

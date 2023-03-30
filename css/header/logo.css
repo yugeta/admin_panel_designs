@@ -10,27 +10,21 @@
   margin-left:10px;
   font-size:1.2rem;
   font-weight:bold;
-  /* letter-spacing:-0.3rem; */
   white-space:nowrap;
-  
-  /* color:pink; */
 }
 .logo img,
 .logo svg{
   max-height:100%;
 }
-/* @media (max-width:500px){
-  .logo .title{
-    font-size:1.6rem;
+
+@media (max-width:1000px){
+  .logo{
+    padding:15px;
   }
-} */
-/* .logo:hover{
-  background-color:var(--color-01);
+  .logo .title{
+    font-size:0;
+  }
 }
-.logo:hover .title{
-  color:var(--color-font-invert);
+@media (max-width:500px){
+  
 }
-.logo:hover img,
-.logo:hover svg{
-  filter:invert(100%) grayscale(100%);
-} */
