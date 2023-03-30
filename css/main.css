@@ -1,0 +1,10 @@
+main{
+  min-height : calc(100% - var(--size-header-height) - var(--size-footer-height));
+  padding:20px;
+}
+
+main{
+  /* height : calc(100% - var(--size-header-height)); */
+  overflow-y:auto;
+  padding:0;
+}

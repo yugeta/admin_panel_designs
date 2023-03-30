@@ -1,0 +1,39 @@
+body menu{
+  
+  padding:0;
+  overflow:auto;
+}
+
+menu > a{
+  height: var(--size-menu-list);
+  display:flex;
+  align-items:center;
+  padding:10px;
+  cursor:pointer;
+  background-color:var(--color-bg);
+  color:var(--color-font);
+  text-decoration:none;
+}
+menu > a svg{
+  width:var(--size-menu-icon);
+  height:var(--size-menu-icon);
+  margin: 0 10px;
+  fill : var(--color-font);
+}
+
+menu > a[data-status='active']{
+  background-color:var(--color-01);
+  color:var(--color-font-invert);
+}
+menu > a[data-status='active'] svg{
+  fill : var(--color-font-invert);
+}
+
+menu > a:hover:not([data-status='active']){
+  background-color:var(--color-menu-hover);
+  color:var(--color-header-text-invert);
+}
+menu > a:hover:not([data-status='active']) svg{
+  fill : var(--color-header-text-invert);
+}
+

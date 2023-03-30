@@ -1,0 +1,41 @@
+.lists{
+  display:block;
+}
+.lists ul{
+  width:800px;
+  max-width:90%;
+  margin:20px auto;
+}
+.lists .item{
+  display:block;
+  border-top:1px solid #ccc;
+  margin-bottom:30px;
+  position:relative;
+  padding-top:100px;
+}
+.lists .img{
+  display:inline-block;
+  width:50%;
+  max-width:320px;
+  vertical-align:top;
+}
+.lists img{
+  width:100%;
+}
+.lists .id{
+  position:absolute;
+  top:0;
+  left:0;
+  font-size:4.0rem;
+}
+.lists .content{
+  display:inline-block;
+  width:50%;
+  white-space:pre-wrap;
+  word-break:break-all;
+  vertical-align:top;
+  padding:0 0 0 20px;
+  font-size:1.2rem;
+}
+
+
