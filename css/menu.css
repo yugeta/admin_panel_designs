@@ -1,10 +1,9 @@
 body menu{
-  
   padding:0;
   overflow:auto;
 }
 
-menu > a{
+menu nav > a{
   height: var(--size-menu-list);
   display:flex;
   align-items:center;
@@ -14,31 +13,31 @@ menu > a{
   color:var(--color-font);
   text-decoration:none;
 }
-menu > a svg{
+menu nav > a svg{
   width:var(--size-menu-icon);
   height:var(--size-menu-icon);
   margin: 0 10px;
   fill : var(--color-font);
 }
 
-menu > a[data-status='active']{
+menu nav > a[data-status='active']{
   background-color:var(--color-01);
   color:var(--color-font-invert);
 }
-menu > a[data-status='active'] svg{
+menu nav > a[data-status='active'] svg{
   fill : var(--color-font-invert);
 }
 
-menu > a:hover:not([data-status='active']){
+menu nav > a:hover:not([data-status='active']){
   background-color:var(--color-menu-hover);
   color:var(--color-header-text-invert);
 }
-menu > a:hover:not([data-status='active']) svg{
+menu nav > a:hover:not([data-status='active']) svg{
   fill : var(--color-header-text-invert);
 }
 
 @media (max-width:1000px){
-  menu > a{
+  menu nav > a{
     font-size:0;
     padding:0;
     justify-content:center;
@@ -46,5 +45,38 @@ menu > a:hover:not([data-status='active']) svg{
 }
 
 @media (max-width:500px){
-  
+  menu{
+    width:auto;
+    /* position:relative; */
+  }
+  menu nav{
+    position:absolute;
+    /* top:calc(var(--size-header-height) * 2); */
+    top: calc(var(--size-header-height) + var(--size-menu-icon) + 10px);
+    left:-100%;
+    z-index:2;
+    width:80%;
+    max-height:(100vh - var(--size-header-height) * 2);
+    box-shadow:5px 5px 20px rgba(0,0,0,0.5);
+    overflow-y:auto;
+    transition-property:left;
+    transition-duration:0.3s;
+  }
+  menu nav > a{
+    font-size:1.0rem;
+    justify-content:flex-start;
+  }
+  menu .menu-toggle ~ nav > *{
+    height:var(--size-menu-height-mobile);
+    line-height:var(--size-menu-height-mobile);
+    width:100%;
+    text-align:center;
+  }
+  menu .menu-toggle ~ nav > *+*{
+    border-top:1px solid #aaa;
+  }
+  menu .menu-toggle:checked ~ nav{
+    left: 0;
+    box-shadow:5px 5px 20px rgba(0,0,0,0.5);
+  }
 }

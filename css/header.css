@@ -6,7 +6,7 @@ header{
   height : var(--size-header-height);
   display:flex;
   align-items:center;
-  position:relative;
+  /* position:relative; */
   /* border-bottom:1px solid #ccc; */
 }
 
@@ -22,9 +22,17 @@ header img{
   max-height:100%;
 }
 
+@media (max-width:1000px){
+  
+}
+@media (max-width:500px){
+  header .margin{
+    display:none;
+  }
+  body header{
+    /* position:absolute; */
+    background-color:var(--color-bg);
+    /* height:var(--size-header-height); */
+  }
 
-
-
-
-
-
+}

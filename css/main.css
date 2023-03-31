@@ -8,3 +8,15 @@ main{
   overflow-y:auto;
   padding:0;
 }
+
+@media (max-width:1000px){
+
+}
+
+@media (max-width:500px){
+  main{
+    height:auto;
+    /* overflow-y:visible; */
+    min-height:auto;
+  }
+}

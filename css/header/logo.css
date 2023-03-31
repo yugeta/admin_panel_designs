@@ -1,6 +1,6 @@
 .logo{
   height:var(--size-header-height);
-  padding:15px;
+  padding-left:20px;
   display:flex;
   align-items:center;
   text-decoration:none;
@@ -15,16 +15,36 @@
 .logo img,
 .logo svg{
   max-height:100%;
+  /* width:var(--size-menu-icon); */
+  height:50%;
 }
 
 @media (max-width:1000px){
   .logo{
-    padding:15px;
+    padding:0;
+    justify-content:center;
   }
   .logo .title{
+    display:none;
     font-size:0;
   }
 }
 @media (max-width:500px){
-  
+  .logo{
+    /* position:absolute;
+    left:0; */
+    /* width:calc(100% - var(--size-hamburger) - 20px); */
+    width:100%;
+    /* overflow:visible; */
+    font-size:1.2rem;
+    padding:0;
+    background-color:var(--color-bg);
+    z-index:2;
+    padding-left:10px;
+    justify-content:start;
+  }
+  .logo .title{
+    display:inline-block;;
+    font-size:1.2rem;
+  }
 }
