@@ -234,7 +234,7 @@
   Main.prototype.set_page_active = function(){
     const urlinfo = new UrlInfo()
     const current_p = urlinfo.query.p
-    const side_menus = document.querySelectorAll('menu > a')
+    const side_menus = document.querySelectorAll('menu nav > a')
     const head_menus = document.querySelectorAll('header .menu > a')
     const menus = [...side_menus , ...head_menus]
     for(const menu of menus){
