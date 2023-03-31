@@ -1,0 +1,21 @@
+[data-badge]{
+  --size-badge:20px;
+  --size-margin : 2px;
+  --size-font : 11px;
+  position:relative;
+}
+[data-badge]:not(:empty)::before{
+  content: attr(data-badge);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width  : var(--size-badge);
+  height : var(--size-badge);
+  position:absolute;
+  top:var(--size-margin);
+  left:var(--size-margin);
+  font-size:var(--size-font);
+  background-color:red;
+  color:white;
+  border-radius:50%;
+}

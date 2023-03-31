@@ -20,9 +20,18 @@ footer{
     content:'©';
     font-size:2.0rem;
   }
-  footer:hover{
-    background-color:var(--color-menu-hover);
+  footer:hover::before{
+    content:'';
   }
+  footer:hover{
+    /* background-color:var(--color-menu-hover); */
+    position:absolute;
+    bottom:0;
+    font-size: 1.0rem;
+    padding-right:10px;
+    border:1px solid var(--color-menu-hover);
+  }
+
 }
 @media (max-width:500px){
   footer{
