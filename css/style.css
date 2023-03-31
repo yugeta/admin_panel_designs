@@ -6,7 +6,7 @@
 
 :root{
   --size-header-height : 60px;
-  --size-footer-height : 0px;
+  --size-footer-height : 60px;
   --size-side-menu     : 250px;
   --size-font          : 14px;
   --color-01           : #01038a;
@@ -43,7 +43,7 @@
 body{
   display:grid;
   grid-template-columns : var(--size-side-menu) 1fr;
-  grid-template-rows    : var(--size-header-height) 1fr 100px;
+  grid-template-rows    : var(--size-header-height) 1fr var(--size-footer-height);
   gap:1px;
   background-color:var(--color-body-bg);
   overflow:hidden;
