@@ -99,6 +99,7 @@
    * Main
    */
   function Main(){
+    Options.asset_name = this.get_asset_name()
     this.options = Options
     this.init()
     this.check_env()
@@ -127,7 +128,7 @@
   }
 
   Main.prototype.start = function(){
-    this.load_modules()
+    // this.load_modules()
     this.load_assset()
     // this.set_page_active()
   }
@@ -144,7 +145,6 @@
   Main.prototype.load_modules = function(){
     const elm_js = document.querySelector(`script[data-module='mynt']`)
     if(!elm_js){
-      Options.asset_name = this.get_asset_name()
       const script = document.createElement('script')
       script.setAttribute('data-module' , 'mynt')
       script.src = `js/page/${Options.asset_name}.js?${Options.version}`
@@ -220,6 +220,7 @@
       this.loaded()
     }
   }
+  
   Main.prototype.loaded_asset = function(res){
     const index = this.check_load_lists.findIndex(e => e === res.options.path)
     this.check_load_lists.splice(index,1)

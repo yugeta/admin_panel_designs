@@ -6,7 +6,7 @@ main{
 main{
   /* height : calc(100% - var(--size-header-height)); */
   overflow-y:auto;
-  padding:0;
+  padding:20px;
 }
 
 @media (max-width:1000px){
