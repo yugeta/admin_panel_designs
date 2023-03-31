@@ -87,8 +87,9 @@ label[for='menu_toggle']{
     top:var(--size-header-height);
     left:-100%;
     width:80%; */
-    height:var(--size-header-height);
-    height: calc(var(--size-menu-icon) + 10px);
+    /* height:var(--size-header-height);
+    height: calc(var(--size-menu-icon) + 10px); */
+    height:100%;
     /* background-color:white; */
     margin:0;
     width:100%;

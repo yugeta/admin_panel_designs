@@ -13,9 +13,9 @@ class Main{
   }
 
   public static function set_language(){
-    $cookie_json = $_COOKIE['nanoHub_data'] ?? '{}';
+    $cookie_json = isset($_COOKIE['nanoHub_data']) ? $_COOKIE['nanoHub_data'] : '{}';
     $cookie_data = json_decode($cookie_json , true);
-    self::$options['language'] = $cookie_data['language'] ?? 'japanese';
+    self::$options['language'] = isset($cookie_data['language']) ? $cookie_data['language'] : 'japanese';
   }
 
   public static function get_language(){

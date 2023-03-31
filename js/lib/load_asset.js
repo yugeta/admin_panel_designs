@@ -18,7 +18,7 @@
   }
   LoadAsset.prototype.load = function(){
     new Ajax({
-      url     : 'asset/'+ this.options.path,
+      url     : `asset/${this.options.path}?${(+new Date())}`,
       method  : 'get',
       success : this.loaded.bind(this)
     })

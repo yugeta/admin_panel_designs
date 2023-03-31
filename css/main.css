@@ -18,5 +18,6 @@ main{
     height:auto;
     /* overflow-y:visible; */
     min-height:auto;
+    flex:1;
   }
 }

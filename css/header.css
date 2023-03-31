@@ -33,6 +33,7 @@ header img{
     /* position:absolute; */
     background-color:var(--color-bg);
     /* height:var(--size-header-height); */
+    height: calc(var(--size-menu-icon) + 10px);
   }
 
 }
