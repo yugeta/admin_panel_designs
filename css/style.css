@@ -17,12 +17,13 @@
   --color-font         : var(--color-01);
   --color-font-invert  : var(--color-03);
   --size-hamburger     : 40px;
-  --size-menu-list : 60px;
-  --size-menu-icon : 24px;
+  --size-menu-list     : 60px;
+  --size-menu-icon     : 24px;
   --size-menu-height-mobile:50px;
-  --color-menu-hover : #eee;
-  --color-header-text : #888;
+  --color-menu-hover   : #eee;
+  --color-header-text  : #888;
   --color-header-text-invert : #000;
+  --color-bain-bg      : #f8f8f8;
 }
 
 *, *:before, *:after {
@@ -49,7 +50,7 @@ body{
   overflow:hidden;
 }
 body > *{
-  background-color:var(--color-bg);
+  /* background-color:var(--color-bg); */
   margin:0;
   /* padding:10px; */
 }

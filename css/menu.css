@@ -1,6 +1,7 @@
 body menu{
   padding:0;
   overflow:auto;
+  background-color:var(--color-bg);
 }
 
 menu nav > a{

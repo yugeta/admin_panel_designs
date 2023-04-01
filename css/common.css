@@ -48,3 +48,13 @@ h6{
   font-size : 0.6rem;
 }
 
+.flex{
+  display:flex;
+}
+.center{
+  text-align:center;
+}
+.right{
+  text-align:right;
+}
+

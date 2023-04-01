@@ -1,0 +1,115 @@
+body main .content{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  /* grid-template-rows: 200px; */
+  
+  gap : 20px;
+}
+
+body main .content > *{
+  background-color:white;
+  height:200px;
+  padding:10px;
+}
+
+/* Panels */
+body main .content .panels{
+  /* grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; */
+  display:flex;
+  gap:10px;
+  width:100%;
+}
+body main .content .panels > *{
+  flex:1;
+}
+body main .content .panels *{
+  color:white;
+}
+body main .content .panels .exprenses{
+  background-color:#040688;
+}
+body main .content .panels .exprenses .img{
+  background-color:#34369d;
+}
+body main .content .panels .revenue{
+  background-color:#17a7e7;
+}
+body main .content .panels .revenue .img{
+  background-color:#40b8ed;
+}
+body main .content .panels p{
+  font-size:1.2rem;
+  padding:10px 10px 20px;
+  margin:0;
+}
+body main .content .panels .img{
+  width  : 50px;
+  height : 50px;
+  
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+body main .content .panels .img svg{
+  width  : 60%;
+  height : 60%;
+  fill:white;
+}
+body main .content .panels .flex{
+  align-items:center;
+  justify-content:space-between;
+  margin:10px;
+}
+body main .content .panels .flex{
+  
+}
+body main .content .panels .flex > *:nth-of-type(1){
+  width:50px;
+}
+body main .content .panels .flex > *:nth-of-type(2){
+  flex:1;
+  padding:10px;
+}
+body main .content .panels .number{
+  font-size:1.4rem;
+  font-weight:bold;
+}
+body main .content .panels .per{
+  font-size:0.8rem;
+  color:#eee;
+}
+body main .content .panels .parcent{
+  border:1px solid #ccc;
+  padding:5px;
+}
+
+/* Top continues */
+/* body main .content .top-countries{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color:white;
+} */
+
+/* Positions*/
+/* body main .content .position{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color:white;
+} */
+
+/* Unique visotor */
+/* body main .content .unique-visitor{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color:white;
+} */

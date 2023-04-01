@@ -1,6 +1,8 @@
 (()=>{
   'use strict'
 
+  window.loaded_callbacks = []
+
   // 初期設定データ
   const Options = {
     version : '1.0.0',
@@ -175,45 +177,52 @@
   Main.prototype.load_assset = function(){
     let loadd_count = 0
     this.check_load_lists = []
+    const load_lists = []
     if(Options.header){
       loadd_count++
       const path = 'common/header.html'
       this.check_load_lists.push(path)
-      const la = new LoadAsset({
-        path     : path ,
-        selector :  'header' ,
-        callback : this.loaded_asset.bind(this),
+        load_lists.push({
+        path : path,
+        selector : 'header',
+        callback_flg : true,
       })
-      if(la.status !== null){
-
-      }
     }
     if(Options.footer){
       loadd_count++
       const path = 'common/footer.html'
       this.check_load_lists.push(path)
-      new LoadAsset({
-        path     : path , 
-        selector : 'footer' , 
-        callback : this.loaded_asset.bind(this),
+        load_lists.push({
+        path : path,
+        selector : 'footer',
+        callback_flg : true,
       })
     }
     if(Options.menu){
       loadd_count++
       const path ='common/menu.html'
       this.check_load_lists.push(path)
-      new LoadAsset({
-        path     :  path, 
-        selector : 'menu' , 
-        callback : this.loaded_asset.bind(this),
+      load_lists.push({
+        path:path,
+        selector : 'menu',
+        callback_flg : true,
       })
     }
     if(Options.main){
       loadd_count++
       const path = `page/${Options.asset_name}.html`
-      new LoadAsset({
-        path     : path  ,
+      load_lists.push({
+        path : path,
         selector : 'main',
+        callback_flg : false,
+      })
+    }
+
+    for(const data of load_lists){
+      new LoadAsset({
+        path     : data.path , 
+        selector : data.selector, 
+        callback : data.callback_flg ? this.loaded_asset.bind(this) : null,
       })
     }
     if(!loadd_count){
@@ -229,7 +238,13 @@
   }
 
   Main.prototype.loaded = function(){
+    this.flg_loaded = true
     this.set_page_active()
+    if(window.loaded_callbacks.length){
+      for(const func of window.loaded_callbacks){
+        func()
+      }
+    }
   }
 
   Main.prototype.set_page_active = function(){
@@ -245,6 +260,16 @@
       }
     }
   }
+
+  // Main.prototype.finish = function(func){
+  //   if(!func){return}
+  //   if(this.flg_loaded){
+  //     func()
+  //   }
+  //   else{
+  //     window.window.loaded_callbacks.push(func)
+  //   }
+  // }
 
   // 実行
   new Autoload()

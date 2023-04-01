@@ -33,3 +33,7 @@ Author : Yugeta.Koji
 - フッタ
   - サイドメニューまたは、画面最下部に表示されます。
 
+# Page sample
+- Dashboard (index)
+  - 
+
