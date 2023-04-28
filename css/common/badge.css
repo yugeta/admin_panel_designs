@@ -1,10 +1,10 @@
 [data-badge]{
   --size-badge:20px;
   --size-margin : 2px;
-  --size-font : 11px;
+  --size-badge-font : 11px;
   position:relative;
 }
-[data-badge]:not(:empty)::before{
+[data-badge]::before{
   content: attr(data-badge);
   display:flex;
   align-items:center;
@@ -14,8 +14,11 @@
   position:absolute;
   top:var(--size-margin);
   left:var(--size-margin);
-  font-size:var(--size-font);
+  font-size:var(--size-badge-font);
   background-color:red;
   color:white;
   border-radius:50%;
+}
+[data-badge=""]::before{
+  display:none!important;
 }
