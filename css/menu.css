@@ -116,17 +116,11 @@ menu nav > ul > li:has(input[type='checkbox']:checked) > ul{
     z-index:2;
     width:80%;
     max-height : calc(100vh - var(--size-header-height) - (var(--size-menu-icon) + 10px)); 
-    /* max-height:(100vh - var(--size-header-height) * 2); */
     box-shadow:5px 5px 20px rgba(0,0,0,0.5);
     overflow-y:auto;
     transition-property:left;
     transition-duration:0.3s;
   }
-  /* menu nav ul > li > a,
-  menu nav ul > li > label{
-    font-size:1.0rem;
-    justify-content:flex-start;
-  } */
   menu .menu-toggle ~ nav > ul > *{
     min-height:var(--size-menu-height-mobile);
     line-height:var(--size-menu-height-mobile);

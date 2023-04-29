@@ -25,7 +25,6 @@ footer{
     content:'';
   }
   footer:hover{
-    /* background-color:var(--color-menu-hover); */
     position:absolute;
     bottom:0;
     font-size: 1.0rem;
