@@ -2,6 +2,7 @@ import { Init }      from './init.js'
 import { SvgImport } from './lib/svg_import.js'
 import { Menu }      from './menu.js'
 
+window.loaded_callbacks = []
 export const Main = {}
 
 function start(){
@@ -13,8 +14,13 @@ function start(){
       {file : `page/{{page_name}}/index.html`,   selector : 'main'},
     ],
   }).then(e => {
+    console.log('main')
     new SvgImport()
     new Menu()
+    for(const callback of window.loaded_callbacks){
+      callback()
+    }
+    window.loaded_callbacks = null
   })
 }
 
