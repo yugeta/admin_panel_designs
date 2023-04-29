@@ -69,10 +69,10 @@ main{
 
 @media (max-width:1000px){
   :root{
-    --size-side-menu : var(--size-header-height);
+    --size-side-menu : calc(var(--size-header-height) + 10px);
   }
   body{
-    grid-template-rows : var(--size-header-height) 1fr var(--size-header-height);
+    grid-template-rows : calc(var(--size-header-height) + 10px) 1fr var(--size-header-height);
   }
 }
 

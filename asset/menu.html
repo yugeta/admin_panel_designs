@@ -51,16 +51,106 @@
       </a>
     </li>
     <li>
-      <a href='?p=receipt'>
+      <label for='document'>
         <svg src='img/icons/receipt_long.svg'></svg>
         <span>伝票</span>
-      </a>
+      </label>
+      <input type='checkbox' id='document'>
+      <ul>
+        <li>
+          <a href='?p=document_estimate'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>見積書</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=document_invoice'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>請求書</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=document_receipt'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>領収書</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=document_delivery_slip'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>納品書</span>
+          </a>
+        </li>
+      </ul>
     </li>
     <li>
-      <a href='?p=database'>
+      <label for='master'>
         <svg src='img/icons/database.svg'></svg>
         <span>マスター</span>
-      </a>
+      </label>
+      <input type='checkbox' id='master'>
+      <ul>
+        <li>
+          <a href='?p=master_kamoku_class'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>科目分類</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_kamoku_group'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>科目グループ</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_kamoku'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>科目リスト</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_company'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>取引会社</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_company_parson'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>取引会社-担当者</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_shiwake_group'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>仕分けグループ</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_shop'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>店舗</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_accouting_repeat'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>繰り返し経費</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_bank'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>振り込み講座</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=master_stamp'>
+            <svg src='img/icons/database.svg'></svg>
+            <span>スタンプ管理</span>
+          </a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href='?p=system'>
