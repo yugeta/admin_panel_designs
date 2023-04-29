@@ -1,10 +1,10 @@
-import { Init }     from './init.js'
+import { Init }      from './init.js'
 import { SvgImport } from './lib/svg_import.js'
+import { Menu }      from './menu.js'
 
 export const Main = {}
 
 function start(){
-  const page_name = 
   new Init({
     assets : [
       {file : 'asset/menu.html',                 selector : 'menu'},
@@ -14,6 +14,7 @@ function start(){
     ],
   }).then(e => {
     new SvgImport()
+    new Menu()
   })
 }
 

@@ -1,6 +1,4 @@
-import { Main } from './main.js'
 import { Urlinfo }   from './lib/urlinfo.js'
-
 import { Asset }     from './asset.js'
 
 export class Init{

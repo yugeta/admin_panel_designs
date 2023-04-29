@@ -37,3 +37,6 @@ Author : Yugeta.Koji
 - Dashboard (index)
   - 
 
+# Caution
+- コンテンツファイル、"page/[%page-name]/index.html"が存在しないと、ページエラーになるので、必ずファイルを設置する。
+
