@@ -1,35 +1,19 @@
-import { Asset }   from './asset.js'
-import { Urlinfo } from './lib/urlinfo.js'
+import { Init }     from './init.js'
+import { SvgImport } from './lib/svg_import.js'
 
-export const Main = {
-  urlinfo : new Urlinfo(),
-}
+export const Main = {}
 
 function start(){
-  assets()
-  content()
-}
-
-function assets(){
-  new Asset({
-    file     : 'asset/menu.html',
-    selector : 'menu',
-  })
-  new Asset({
-    file     : 'asset/header.html',
-    selector : 'header',
-  })
-  new Asset({
-    file     : 'asset/footer.html',
-    selector : 'footer',
-  })
-}
-
-function content(){
-  const page = Main.urlinfo.queries.p || 'index'
-  new Asset({
-    file     : `page/${page}/index.html`,
-    selector : 'main',
+  const page_name = 
+  new Init({
+    assets : [
+      {file : 'asset/menu.html',                 selector : 'menu'},
+      {file : 'asset/header.html',               selector : 'header'},
+      {file : 'asset/footer.html',               selector : 'footer' },
+      {file : `page/{{page_name}}/index.html`,   selector : 'main'},
+    ],
+  }).then(e => {
+    new SvgImport()
   })
 }
 

@@ -25,5 +25,11 @@ export class Asset{
   loaded(res){
     if(!res || !res.data){return}
     this.elm.insertAdjacentHTML('beforeend' , res.data)
+    this.finish()
+  }
+
+  finish(){
+    if(!this.options.callback){return}
+    this.options.callback(this)
   }
 }
