@@ -4,36 +4,69 @@
 </label>
 
 <nav>
-  <a href='./' data-badge='3'>
-    <svg src='img/icons/dashboard.svg'></svg>
-    <span>Dashboard</span>
-  </a>
-  <a href='?p=accounting'>
-    <svg src='img/icons/calculate.svg'></svg>
-    <span>経費入力</span>
-  </a>
-  <a href='?p=accounting_data'>
-    <svg src='img/icons/file_copy.svg'></svg>
-    <span>経費資料</span>
-  </a>
-  <a href='?p=schedule' data-badge='4'>
-    <svg src='img/icons/schedule.svg'></svg>
-    <span>予定</span>
-  </a>
-  <a href='?p=customer'>
-    <svg src='img/icons/diversity_3.svg'></svg>
-    <span>顧客</span>
-  </a>
-  <a href='?p=receipt'>
-    <svg src='img/icons/receipt_long.svg'></svg>
-    <span>伝票</span>
-  </a>
-  <a href='?p=database'>
-    <svg src='img/icons/database.svg'></svg>
-    <span>マスター</span>
-  </a>
-  <a href='?p=system'>
-    <svg src='img/icons/gear.svg'></svg>
-    <span>システム</span>
-  </a>
+  <ul>
+    <li>
+      <a href='./' data-badge='3'>
+        <svg src='img/icons/dashboard.svg'></svg>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href='?p=accounting'>
+        <svg src='img/icons/calculate.svg'></svg>
+        <span>経費入力</span>
+      </a>
+    </li>
+    <li>
+      <label for='accounting_data'>
+        <svg src='img/icons/file_copy.svg'></svg>
+        <span>経費資料</span>
+      </label>
+      <input type='checkbox' id='accounting_data'>
+      <ul>
+        <li>
+          <a href='?p=accounting_data_year'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>年次資料</span>
+          </a>
+        </li>
+        <li>
+          <a href='?p=accounting_data_month'>
+            <svg src='img/icons/description.svg'></svg>
+            <span>月次資料</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href='?p=schedule' data-badge='4'>
+        <svg src='img/icons/schedule.svg'></svg>
+        <span>予定</span>
+      </a>
+    </li>
+    <li>
+      <a href='?p=customer'>
+        <svg src='img/icons/diversity_3.svg'></svg>
+        <span>顧客</span>
+      </a>
+    </li>
+    <li>
+      <a href='?p=receipt'>
+        <svg src='img/icons/receipt_long.svg'></svg>
+        <span>伝票</span>
+      </a>
+    </li>
+    <li>
+      <a href='?p=database'>
+        <svg src='img/icons/database.svg'></svg>
+        <span>マスター</span>
+      </a>
+    </li>
+    <li>
+      <a href='?p=system'>
+        <svg src='img/icons/gear.svg'></svg>
+        <span>システム</span>
+      </a>
+    </li>
+  </ul>
 </nav>
