@@ -25,34 +25,40 @@ export class Asset{
   loaded(res){
     if(!res || !res.data){return}
     this.elm.insertAdjacentHTML('beforeend' , res.data)
-    this.set_script()
+    this.set_scripts()
     this.finish()
   }
 
-  set_script(){
-    const scripts = this.elm.querySelectorAll('script')
+  set_scripts(){
+    const scripts = Array.from(this.elm.querySelectorAll('script'))
+    this.set_script(scripts)
+  }
+
+  set_script(scripts){
     if(!scripts || !scripts.length){return}
-    for(const script of scripts){
-      const new_script = document.createElement('script')
-      if(script.getAttribute('src')){
-        this.set_script_src(script , new_script)
-      }
-      else{
-        this.set_script_inner(script)
-      }
+    const target_script = scripts.shift()
+    if(target_script.getAttribute('src')){
+      this.set_script_src(target_script , scripts)
+    }
+    else{
+      this.set_script_inner(target_script , scripts)
     }
   }
 
-  set_script_src(berfore_script){
+  set_script_src(berfore_script , scripts){
     const new_script = document.createElement('script')
+    new_script.onload = (scripts => {
+      this.set_script(scripts)
+    }).bind(this , scripts)
     this.copy_attributes(berfore_script , new_script)
     new_script.setAttribute('data-set',1)
     berfore_script.parentNode.insertBefore(new_script , berfore_script)
     berfore_script.parentNode.removeChild(berfore_script)
   }
-  set_script_inner(berfore_script){
+  set_script_inner(berfore_script , scripts){
     const script_value = berfore_script.textContent
-    return Function('(' + script_value + ')')();
+    Function('(' + script_value + ')')();
+    this.set_script(scripts)
   }
 
   copy_attributes(before_elm , after_elm){

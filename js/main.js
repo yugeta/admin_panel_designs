@@ -14,7 +14,6 @@ function start(){
       {file : `page/{{page_name}}/index.html`,   selector : 'main'},
     ],
   }).then(e => {
-    console.log('main')
     new SvgImport()
     new Menu()
     for(const callback of window.loaded_callbacks){

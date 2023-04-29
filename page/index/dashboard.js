@@ -252,17 +252,28 @@
 
   }
 
+  // init()
+  // function init(){
+  //   const script = document.createElement('script')
+  //   script.src = 'https://cdn.jsdelivr.net/npm/chart.js'
+  //   script.onload = load
+  //   document.querySelector('head').appendChild(script)
+  // }
+
+  load()
   // frameworkのpage-load判定処理
-  // console.log(window.Main,window.Main.flg_loaded)
-  if(window.Main && window.Main.flg_loaded){
-    new Dashboard()
-  }
-  else if(window.loaded_callbacks === null){
-    new Dashboard()
-  }
-  else{
-    window.loaded_callbacks.push((()=>{console.log('chart');new Dashboard()}).bind(this))
-    // window.addEventListener('DOMContetLoaded' , (()=>{new Dashboard()}).bind(this))
+  function load(){
+    // console.log(window.Main,window.Main.flg_loaded)
+    if(window.Main && window.Main.flg_loaded){
+      new Dashboard()
+    }
+    else if(window.loaded_callbacks === null){
+      new Dashboard()
+    }
+    else{
+      window.loaded_callbacks.push((()=>{console.log('chart');new Dashboard()}).bind(this))
+      // window.addEventListener('DOMContetLoaded' , (()=>{new Dashboard()}).bind(this))
+    }
   }
 
 })()
