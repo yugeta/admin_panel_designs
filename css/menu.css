@@ -60,9 +60,7 @@ menu nav input[type='checkbox']{
 menu nav > ul > li > ul{
   display:none;
 }
-menu nav > ul > li > ul > li > a{
-  padding-left:30px;
-}
+
 menu nav > ul > li:has(ul)::after{
   --size-arrow:10px;
   content : '';
@@ -85,23 +83,57 @@ menu nav > ul > li:has(input[type='checkbox']:checked) > ul{
   display:block;
 }
 
+.menu-tooltip{
+  --size-tail:20px;
+  display:none;
+  position:absolute;
+  background-color: white;
+  padding:0 10px;
+  filter:drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+  min-width:100px;
+  transform:translate(var(--size-tail) , 0);
+}
+.menu-tooltip::before{
+  content:'';
+  display:block;
+  border-right  : var(--size-tail) solid white;
+  border-top    : calc(var(--size-tail) / 1.5) solid transparent;
+  border-bottom : calc(var(--size-tail) / 1.5) solid transparent;
+  position:absolute;
+  top:50%;
+  left:calc(var(--size-tail) * -1);
+  transform:translate(0 , -50%);
+  
+}
+
+@media (min-width:1001px){
+  menu nav > ul > li > ul > li > a{
+    padding-left:30px;
+  }
+}
 @media (min-width:501px) and (max-width:1000px){
+  body menu{
+    overflow-x:visible;
+    overflow-y:auto;
+  }
   menu nav ul > li > a,
   menu nav ul > li > label{
-    font-size:0;
-    padding:0;
     justify-content:center;
   }
+
+  menu nav ul > li > a,
+  menu nav ul > li > label,
   menu nav ul > li > a *,
   menu nav ul > li > label *{
     font-size:0;
   }
+
   menu nav > ul > li:has(ul)::after{
     --size-arrow:5px;
     right: 5px;
   }
-  menu nav > ul > li > ul > li > a{
-    padding-left:0px;
+  .menu-tooltip{
+    display:block;
   }
 }
 

@@ -61,9 +61,9 @@ main{
   grid-row-end: 4;
 }
 
-@media (max-width:1000px){
-  :root{
-    --size-side-menu : calc(var(--size-header-height) + 10px);
+@media (min-width:500px) and (max-width:1000px){
+  body{
+    grid-template-columns : calc(var(--size-header-height) + 10px) 1fr;
   }
   body{
     grid-template-rows : var(--size-header-height) 1fr var(--size-header-height);
