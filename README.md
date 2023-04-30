@@ -42,7 +42,9 @@ Author : Yugeta.Koji
 
 # Howto
 
-1. Google OAuth認証をする場合の設定ファイルを設置
+1. /.gitフォルダを削除してお使い下さい。
+
+2. Google OAuth認証をする場合の設定ファイルを設置
 - data/login.json
 ```
 {
@@ -53,24 +55,24 @@ Author : Yugeta.Koji
 }
 ```
 
-2. ヘッダメニュー
+3. ヘッダメニュー
 - 編集ファイル : asset/header.html
 - DOM構成 : header / nav / div.menu / *
   - aタグ : 内部に画像(img , svg)を設置することで、アイコンリンクの設置。
   - divタグ : 内部に ul/li構造で、プルダウンメニューを作ることが可能
 
-3. サイドメニュー
+4. サイドメニュー
 - 編集ファイル : asset/menu.html
 - DOM構成 : menu / nav / ul / li / a / 
   - svg（アイコン）
   - span（名称）
   - ul サブメニューを登録できる。
 
-4. 属性仕様
+5. 属性仕様
 - data-unlogin : 未ログイン状態の時のみ表示する。（値不要）
 - data-logined : ログイン済み状態の時のみ表示する。（値不要）
 
-5. コンテンツメニュー
+6. コンテンツメニュー
 - 編集ファイル : page/コンテンツ（ページ）name/index.html
 - DOM構成 : main / 
 - index.html内に、cssやscriptのタグを貼り付けて、処理を実行することができる。
