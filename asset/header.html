@@ -16,12 +16,25 @@
     <!-- <a href='?p=login'>
       <svg class='icon' src='img/icons/login_2.svg'></svg>
     </a> -->
-    <a class='logout' href='?p=logout' data-logined>
+    <!-- <a class='logout' href='?p=logout' data-logined>
       <svg class='icon' src='img/icons/logout_2.svg'></svg>
-    </a>
-    <div id='google_icon' data-logined>
+    </a> -->
+    <!-- <div id='google_icon' data-logined>
       <svg class='icon' src='img/icons/person.svg'></svg>
-    </div>
+    </div> -->
     <div id='google_login' data-unlogin></div>
+    <div class='lists' data-logined>
+      <label for='user_menu' id='google_icon'>
+        <svg class='icon' src='img/icons/person.svg'></svg>
+      </label>
+      <input id='user_menu' type='checkbox'>
+      <ul>
+        <li>
+          <a class='logout' href='?p=logout' data-logined>
+            <svg class='icon' src='img/icons/logout_2.svg'></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

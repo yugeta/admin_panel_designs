@@ -1,6 +1,7 @@
 @import 'header/logo.css';
 @import 'header/nav.css';
 @import 'header/hamburger.css';
+@import 'header/auth.css';
 
 header{
   height : var(--size-header-height);

@@ -104,7 +104,8 @@ export class Login{
     })
     google.accounts.id.renderButton(document.getElementById(this.setting_data.parent_id) , {
       logo_alignment : 'center',
-      size           : 'large',
+      size           : 'medium',
+      type           : 'icon',
     })
   }
   callback_google_oauth(e){

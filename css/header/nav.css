@@ -23,7 +23,7 @@ header .menu{
 }
 header .menu > *{
   display:flex;
-  min-width:var(--size-header-height);
+  /* min-width:var(--size-header-height); */
   height:100%;
   padding:5px;
   background-color:var(--color-bg);
