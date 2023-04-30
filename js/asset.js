@@ -1,4 +1,4 @@
-import { Ajax } from './lib/ajax.js'
+// import { Ajax } from './lib/ajax.js'
 
 export class Asset{
   constructor(options){
@@ -15,17 +15,33 @@ export class Asset{
   }
 
   load(){
-    new Ajax({
-      url : this.file,
-      method : 'get',
-      success : this.loaded.bind(this)
-    })
+    // new Ajax({
+    //   url : this.file,
+    //   method : 'get',
+    //   success : this.loaded.bind(this)
+    // })
+    console.log(this.file)
+    const xhr = new XMLHttpRequest()
+    xhr.open('get' , this.file , true)
+    xhr.setRequestHeader('Content-Type', 'text/html');
+    xhr.onreadystatechange = (e => {
+      if(xhr.readyState !== XMLHttpRequest.DONE){return}
+      const status = xhr.status;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        this.loaded({data : e.target.response})
+      }
+      else {
+        this.loaded()
+      }
+    }).bind(this)
+    xhr.send()
   }
 
   loaded(res){
-    if(!res || !res.data){return}
-    this.elm.insertAdjacentHTML('beforeend' , res.data)
-    this.set_scripts()
+    if(res && res.data){
+      this.elm.insertAdjacentHTML('beforeend' , res.data)
+      this.set_scripts()
+    }
     this.finish()
   }
 

@@ -31,11 +31,21 @@ export class SvgImport{
   }
 
   load_svg(elm , src){
-    const req = new XMLHttpRequest()
-    req.open('get' , src , true)
-    req.setRequestHeader('Content-Type', this.mime);
-    req.onload = this.loaded_svg.bind(this , elm)
-    req.send()
+    const xhr = new XMLHttpRequest()
+    xhr.open('get' , src , true)
+    xhr.setRequestHeader('Content-Type', this.mime);
+    // req.onload = this.loaded_svg.bind(this , elm)
+    xhr.onreadystatechange = ((elm , e) => {
+      if(xhr.readyState !== XMLHttpRequest.DONE){return}
+      const status = xhr.status;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        this.loaded_svg(elm , e)
+      }
+      else {
+        this.loaded_svg(elm , e)
+      }
+    }).bind(this , elm)
+    xhr.send()
   }
   loaded_svg(elm , res){
     if(!res || !res.target.response){return}
