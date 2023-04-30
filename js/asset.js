@@ -1,5 +1,3 @@
-// import { Ajax } from './lib/ajax.js'
-
 export class Asset{
   constructor(options){
     this.options = options || {}
@@ -15,12 +13,6 @@ export class Asset{
   }
 
   load(){
-    // new Ajax({
-    //   url : this.file,
-    //   method : 'get',
-    //   success : this.loaded.bind(this)
-    // })
-    console.log(this.file)
     const xhr = new XMLHttpRequest()
     xhr.open('get' , this.file , true)
     xhr.setRequestHeader('Content-Type', 'text/html');

@@ -1,0 +1,11 @@
+body[data-auth=''] [data-logined]{
+  display:none;
+}
+
+body[data-auth='logined'] [data-unlogin]{
+  display:none;
+}
+
+#google_icon img{
+  border-radius:50%;
+}

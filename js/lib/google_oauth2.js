@@ -1,4 +1,4 @@
-export class Google{
+export class GoogleOAuth2{
   constructor(options){
     this.options   = options || {}
     this.callback  = this.options.callback

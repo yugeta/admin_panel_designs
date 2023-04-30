@@ -3,6 +3,7 @@
 @import 'main.css';
 @import 'menu.css';
 @import 'common.css';
+@import 'auth.css';
 
 :root{
   --size-header-height : 60px;
