@@ -23,11 +23,15 @@ export class Asset{
         this.loaded({data : e.target.response})
       }
       else {
-        this.loaded()
+        this.options.file = 'asset/404.html'
+        new Asset(this.options)
+        // this.loaded()
       }
     }).bind(this)
     xhr.send()
   }
+
+
 
   loaded(res){
     if(res && res.data){

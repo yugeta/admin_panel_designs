@@ -9,10 +9,10 @@ export const Main = {}
 function start(){
   new Init({
     assets : [
-      {file : 'asset/menu.html',                 selector : 'menu'},
-      {file : 'asset/header.html',               selector : 'header'},
-      {file : 'asset/footer.html',               selector : 'footer' },
-      {file : `page/{{page_name}}/index.html`,   selector : 'main'},
+      {type : 'menu'    , file : 'asset/menu.html',                 selector : 'menu'},
+      {type : 'header'  , file : 'asset/header.html',               selector : 'header'},
+      {type : 'footer'  , file : 'asset/footer.html',               selector : 'footer'},
+      {type : 'content' , file : `page/{{page_name}}/index.html`,   selector : 'main'},
     ],
   }).then(e => {
     new SvgImport()

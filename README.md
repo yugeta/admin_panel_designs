@@ -42,7 +42,9 @@ Author : Yugeta.Koji
 
 # Howto
 
-1. /.gitフォルダを削除してお使い下さい。
+1. git cloneした直後にやる事。
+- /.gitフォルダを削除してお使い下さい。
+- README.mdを削除してください。
 
 2. Google OAuth認証をする場合の設定ファイルを設置
 - data/login.json
@@ -71,8 +73,15 @@ Author : Yugeta.Koji
 5. 属性仕様
 - data-unlogin : 未ログイン状態の時のみ表示する。（値不要）
 - data-logined : ログイン済み状態の時のみ表示する。（値不要）
+- badge機能     : ヘッダメニュー、サイドメニューのそれぞれの項目で、data-badge='数値'を挿入すると、メニューにバッチ表示がされるようになります。
 
-6. コンテンツメニュー
+6. タイトル（ロゴ）の変更
+- 編集ファイル : index.html
+- DOM構成 : body / a.logo / 
+- レスポンシブ構成で、アイコン画像のみになる場合があるので、アイコン画像は挿入してください。
+- アイコン画像は、faviconファイルを参照するようにセットしています。（変更可）
+
+7. コンテンツメニュー
 - 編集ファイル : page/コンテンツ（ページ）name/index.html
 - DOM構成 : main / 
 - index.html内に、cssやscriptのタグを貼り付けて、処理を実行することができる。
